@@ -6,22 +6,22 @@ on:
 jobs:
  greet:
   runs-on: ubuntu-latest
-  
+
   steps:
    - name: code checkout
      uses: actions/checkout@v4
-   
+
    - name: greet hello
      run: echo "Hello from git workflow"
 
    - name: print date and time
      run: date
- 
+
    - name: print branch name
      run: echo "Branch: ${{ github.ref_name }}"
 
    - name: list all the files
      run: ls -la
 
-   - name: print runner operating system 
+   - name: print runner operating system
      run: echo "Runner OS: $RUNNER_OS"
