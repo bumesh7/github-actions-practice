@@ -21,7 +21,7 @@ jobs:
         run: ls -la
    
       - name: print os name
-        run: echo " Runner OS: $RUNNER_OS"
+        run: echo "Runner OS: $RUNNER_OS"
 
       - name: Print branch name
         run: echo "The current branch is ${{ github.ref_name }}"
