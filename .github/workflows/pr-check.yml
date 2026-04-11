@@ -13,3 +13,4 @@ jobs:
     steps:
       - name: Print PR info
         run: echo "The branch that triggered this run is $GITHUB_REF_NAME"
+        run: echo "PR check running for branch: ${{ github.head_ref }}"
