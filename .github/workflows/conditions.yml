@@ -26,7 +26,7 @@ jobs:
       - name: Continue even if error occurs
         continue-on-error: true
         run: |
-          echo "This step will fail but workflow continues"
+       #   echo "This step will fail but workflow continues"
           exit 1
 
       - name: This still runs because of continue-on-error
