@@ -11,7 +11,8 @@ jobs:
 
   steps:
    - name: Print host name
-     run:  echo "The self-hosted runner name is: $(hostname)"
+     run: | 
+      echo "The self-hosted runner name is: $(hostname)"
 
    - name: Print Present Working Directory
      run: pwd
