@@ -1,0 +1,25 @@
+name: Pre-Installed Checks
+
+on:
+ push:
+  branches: 
+   - main
+
+jobs:
+ explore-tools:
+  runs-on: ubuntu-latest
+
+  steps:
+   - name: Print installed tool versions
+     run: |
+      echo: "Docker Version"
+      docker --version
+    
+      echo: "Python Version"
+      python3 --version
+
+      echo: "Node Version"
+      node --version
+
+      echo: "Git Version"
+      git --version
