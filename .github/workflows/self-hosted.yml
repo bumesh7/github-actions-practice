@@ -7,7 +7,7 @@ on:
 
 jobs:
  self-host:
-  runs-on: self-hosted
+  runs-on: [self-hosted, linux]
 
   steps:
    - name: Print host name
