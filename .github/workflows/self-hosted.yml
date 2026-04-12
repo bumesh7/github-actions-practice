@@ -1,0 +1,23 @@
+name: Self-Hosted Runner
+
+on:
+ push:
+  branches:
+   - main
+
+jobs:
+ self-host:
+  runs-on: self-hosted
+
+  steps:
+   - name: Print host name
+     run:  echo "The self-hosted runner name is: $(hostname)"
+
+   - name: Print Present Working Directory
+     run: pwd
+
+   - name: Create new directory
+     run: |
+      mkdir -p /home/umesh/Documents/github_workflows/test
+      cd /home/umesh/Documents/github_workflows/test
+      pwd
