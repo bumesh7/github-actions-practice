@@ -17,7 +17,7 @@ jobs:
           key: cache-${{ hashFiles('requirements.txt') }}
 
       - name: Install dependencies
-        run: pip install -r /home/umesh/Documents/github_workflows/github-actions-practice/requirements.txt
+        run: pip install -r requirements.txt
 
       - name: Run script
         run: echo "Caching works!"
