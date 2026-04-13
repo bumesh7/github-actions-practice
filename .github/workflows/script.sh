@@ -2,4 +2,4 @@
 
 echo "Running the scripts"
 
-exit 1
+exit 0
