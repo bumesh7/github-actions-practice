@@ -31,9 +31,11 @@ jobs:
           ${{ secrets.DOCKER_USERNAME }}/my-app:sha-${{ env.SHA_SHORT }}
 
       - name: Push latest tag
+        if: github.ref == 'refs/heads/main' # add this condition
         run: |
           docker push ${{ secrets.DOCKER_USERNAME }}/my-app:latest
 
       - name: Push SHA tag
+        if: github.ref == 'refs/heads/main' # add this condition
         run: |
           docker push ${{ secrets.DOCKER_USERNAME }}/my-app:sha-${{ env.SHA_SHORT }}
