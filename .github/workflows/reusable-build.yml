@@ -24,11 +24,12 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-
+       
+      # used to print inputs
       - name: Print build info
-        run: | 
+        run: |
          echo "Building ${{ inputs.app_name }} for ${{ inputs.environment }}"
 
       - name: Verify Docker token
-        run: | 
+        run: |
          echo "Docker token is set: ${{ secrets.docker_token != '' }}"
