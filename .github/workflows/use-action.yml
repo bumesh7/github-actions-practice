@@ -17,4 +17,5 @@ jobs:
           name: Umesh
 
       - name: Check output
-        run: echo "Greeted: ${{ steps.greet.outputs.greeted }}"
+        run: | 
+         echo "Greeted: ${{ steps.greet.outputs.greeted }}"
