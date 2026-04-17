@@ -16,6 +16,11 @@ on:
       docker_token:
         description: "Docker authentication token"
         required: true
+    outputs:
+      build_version:
+        description: "Generated build version"
+        value: ${{ jobs.build.outputs.build_version }}
+
 
 jobs:
   build:
@@ -24,6 +29,12 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+
+      - name: Generate version
+        id: set_version
+        run: |
+          VERSION="v1.0-${GITHUB_SHA::7}"
+          echo "build_version=$VERSION" >> $GITHUB_OUTPUT
        
       # used to print inputs
       - name: Print build info
