@@ -1,0 +1,30 @@
+name: "Greet Action"
+
+inputs:
+  name:
+    required: true
+  language:
+    required: false
+    default: "en"
+
+outputs:
+  greeted:
+    value: ${{ steps.out.outputs.greeted }}
+
+runs:
+  using: "composite"
+  steps:
+    - name: Greet
+      run: echo "Hello ${{ inputs.name }}"
+      shell: bash
+
+    - name: Print info
+      run: |
+        date
+        echo $RUNNER_OS
+      shell: bash
+
+    - name: Set output
+      id: out
+      run: echo "greeted=true" >> $GITHUB_OUTPUT
+      shell: bash
