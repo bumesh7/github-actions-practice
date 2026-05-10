@@ -1,7 +1,7 @@
 name: Hello Script
 
-on:
-  push:
+on: workflow_dispatch
+#  push:
 
 jobs:
   greet:

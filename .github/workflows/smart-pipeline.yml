@@ -1,7 +1,7 @@
 name: Smart Pipeline
 
-on:
-  push:   # triggers on push to any branch
+on: workflow_dispatch
+#  push:   # triggers on push to any branch
 
 jobs:
   lint:

@@ -1,6 +1,6 @@
 name: Artifact Sharing Between Jobs
 
-on: push
+on: workflow_dispatch
 
 jobs:
   job1:

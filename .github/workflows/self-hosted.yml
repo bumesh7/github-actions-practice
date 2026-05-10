@@ -1,9 +1,9 @@
 name: Self-Hosted Runner
 
-on:
- push:
-  branches:
-   - main
+on: workflow_dispatch
+# push:
+#  branches:
+#   - main
 
 jobs:
  self-host:
